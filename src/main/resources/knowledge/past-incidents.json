@@ -1,0 +1,26 @@
+[
+  {
+    "id": "INC-101",
+    "category": "External payment provider issue",
+    "description": "Customers could not pay by card. payment-service logged massive PayGate timeouts starting around 12:05 UTC. Other metrics were normal.",
+    "keywords": ["payment", "card", "paygate", "timeout", "payment-service"]
+  },
+  {
+    "id": "INC-102",
+    "category": "DB degradation caused by reporting",
+    "description": "The /payments/create endpoint took 5-7 seconds. Database CPU was high and reporting-service ran long queries. api-gateway returned 504 errors.",
+    "keywords": ["database", "postgresql", "cpu", "reporting-service", "queries", "504", "payments/create"]
+  },
+  {
+    "id": "INC-103",
+    "category": "Notification delivery issue",
+    "description": "Top-up confirmation e-mails were not delivered although balances were correct. notification-service logged intermittent SMTP connection errors.",
+    "keywords": ["email", "e-mail", "smtp", "notification-service", "notification", "top-up"]
+  },
+  {
+    "id": "INC-104",
+    "category": "User authentication errors",
+    "description": "Some mobile users could not log in. auth-service returned 401 and logged invalid token signatures. Other services had no large-scale failures.",
+    "keywords": ["login", "auth-service", "401", "token", "signature", "authentication", "mobile"]
+  }
+]
